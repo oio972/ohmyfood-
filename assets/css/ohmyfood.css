@@ -1,0 +1,87 @@
+:root {
+    --colorviolet-color: #9356DC;
+    --colorbleufoncé-color: #003A68;
+    --colorbleuclair-color: #89C8FA;
+    --colorvertfoncé-color: #008766;
+    --colorvertclair-color: #99E2D0;
+    --colorgrey2-color: #EAEAEA;
+    --colorboutton-background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    --colorbouttoncommander-background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    --margin0-margin: 0;
+}
+@media screen and (max-width: 412px) {
+body {
+    margin: var(--margin0-margin);
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    color: black;
+}
+.titreohmyfood {
+    display: flex;
+    justify-content: center;
+}
+.iconeparisbelleville {
+    display: flex;
+    justify-content: center;
+    background: var(--colorgrey2-color);
+    padding: 10px;
+}
+.parisbelleville {
+    margin: 0 0 0 15px;
+}
+.backgroundh2 {
+    background: #D2D2D2;
+}
+.titreh2 {
+   text-align: center;
+   padding-top: 39px;
+   margin: var(--margin0-margin);
+}
+.textesousleh2 {
+    text-align: center;
+}
+.divExplorernosrestaurants {
+    display: flex;
+    justify-content: center;
+}
+.Explorernosrestaurants {
+    color: white;
+    text-align: center;
+    background: var(--colorboutton-background);
+    border-radius: 25px;
+    padding: 10px;
+}
+.fonctionnement {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+.divChoississezunrestaurant {
+    display: flex;
+}
+.Choississezunrestaurant {
+    margin: var(--margin0-margin);
+}
+.numero1, .numero2, .numero3 {
+    margin: var(--margin0-margin);
+    background: var(--colorviolet-color);
+    border-radius: 100px;
+}
+.divComposezvotremenu {
+    display: flex;
+}
+.Composezvotremenu {
+    margin: var(--margin0-margin);
+}
+.divDegustezaurestaurant {
+    display: flex;
+}
+.Degustezaurestaurant {
+    margin: var(--margin0-margin);
+}
+
+
+
+
+}
