@@ -305,7 +305,19 @@ footer i, .imagedufooter {
     height: 120px;
 
 }         
-}
                                     /*OHMYFOOD-1*/
                                     /*HEADER*/
 
+.blocflechedegaucheretourettitre-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 10px 0 10px 0;
+}
+.imageledelicedessens-2 {
+    width: 100%;
+    height: 275px;
+}
+
+}
