@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/ohmyfood.css">
     <link rel="stylesheet" href="assets/fontawesome/csss/all.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://kit.fontawesome.com/9733344266.css" crossorigin="anonymous">
     <title>ohmyfood!</title>
 </head>
 <body>
     <header>
                                     <!--HEADER-->                  
-            <h1><img src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood"></h1> 
+            <h1 class="h1titreohmyfood"><img src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood"></h1> 
         <div class="diviconeparisbelleville">
             <i id="iconelocalisation" class="fa-sharp fa-solid fa-location-dot"></i>
             <p class="parisbelleville">Paris, Belleville</p>
@@ -21,7 +21,7 @@
     </header>
                             <!--Réservez le menu qui vous convient-->
 <main> 
-    <div class="blocbackgroundh2">
+    <section class="blocbackgroundh2">
         <div class="divbackgroundh2">
             <div>
                 <h2 class="titreh2">Réservez le menu qui<br />vous convient</h2>
@@ -33,34 +33,40 @@
                     <button class="Explorernosrestaurants">Explorer nos restaurants</button>
             </div>
         </div>
-    </div> 
+    </section>
                         <!--FONCTIONNEMENT-->
-    <section class="bloctoutleblocfonctionnement">
-        <div class="blocfonctionnement">
+    <section class="sectiontoutleblocfonctionnement">
+        <div class="bloctoutleblocfonctionnement">
                         <h2 class="fonctionnement">Fonctionnement</h2>      
             <div class="blocles3choixmenus">
                 <div class="divChoississezunrestaurant">
+                    <div class="detailfonctionement">
                         <p class="numero1">1</p><i class="fa-solid fa-mobile-screen-button"></i><p class="Choississezunrestaurant">Choississez un restaurant</p>
+                    </div>
                 </div>
                 <div class="divComposezvotremenu">
+                    <div class="detailfonctionement">
                         <p class="numero2">2</p><i class="fa-solid fa-list"></i><p class="Composezvotremenu">Composez votre menu</p>
+                    </div>    
                 </div>
                 <div class="divDegustezaurestaurant">
+                    <div class="detailfonctionement">
                         <p class="numero3">3</p><i class="fa-sharp fa-solid fa-store"></i><p class="Degustezaurestaurant">Dégustez au restaurant</p>
+                    </div>
                 </div>  
             </div>    
         </div>
-    </section> 
+    </section>     
                         <!--RESTAURANTS-->  
    
-<section class="blocettitrerestaurants">
+<section class="sectiontitrerestaurants">
                 <h3 class="titreRestaurants">Restaurants</h3>
     <div class="blocles4images">
         <div class="divlapalettedugout">
                 <a href="ohmyfood-1.html">
                 <img class="imagelapalettedugout" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du gout">
                 </a>
-            <div class="diviconecoeur1">
+            <div class="detailiconecoeur">
                 <p><b>La palette du goût</b><br />Ménilmontant</p>
                 <i id="iconecoeur" class="fa-regular fa-heart"></i>
             </div>                     
@@ -69,7 +75,7 @@
                     <a href="ohmyfood-2.html">
                     <img class="imagelanoteenchantee" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la palette du gout">
                         </a>
-                <div class="diviconecoeur2">   
+                <div class="detailiconecoeur">   
                     <p><b>La note enchantée</b><br />Charonne</p>
                     <i id="iconecoeur" class="fa-regular fa-heart"></i>
                 </div>
@@ -78,7 +84,7 @@
                     <a href="ohmyfood-3.html">
                     <img class="imagealafrançaise" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
                     </a>
-                <div class="diviconecoeur3">     
+                <div class="detailiconecoeur">     
                     <p><b>À la française</b><br />Cité Rouge</p>
                     <i id="iconecoeur" class="fa-regular fa-heart"></i>
                 </div>
@@ -87,7 +93,7 @@
                     <a href="ohmyfood-4.html">
                     <img class="imageLedelicedessens" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
                     </a>
-                <div class="diviconecoeur4"> 
+                <div class="detailiconecoeur"> 
                     <p><b>Le délice des sens</b><br />Folie-Méricourt</p>
                     <i id="iconecoeur" class="fa-regular fa-heart"></i>
                  </div>
@@ -98,9 +104,9 @@
 </section>
                                 <!--FOOTER-->
     <footer>
-        <div class="blocfooter">
+        <section class="blocfooter">
             <div class="divfooter">
-                <h3 class="imagedufooter">ohmyfood</h3>
+                <h3 class="titredufooter">ohmyfood</h3>
                 <div class="iconeetProposerunrestaurant">
                     <i id="footericonecouvert" class="fa-solid fa-utensils"></i>
                     <p class="texteProposerunrestaurant">Proposer un restaurant</p>
@@ -112,7 +118,7 @@
                     <p>Mentions légales</p>
                     <p>contact</p> 
             </div>
-        </div>
+        </section>
     </footer>
 </main>       
 </body>
