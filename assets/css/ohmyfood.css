@@ -197,9 +197,10 @@ footer i, .titredufooter {
 
 .blocflechedegaucheretourettitre-1 {
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     width: 70%;
+    height: 50px;
 }                        
 .titreohmyfoodheader-1 {
     display: flex;
@@ -412,7 +413,260 @@ footer i, .titredufooter {
     color: white;
     font-family: var(--fontfamillyohmyfood-font-family);
 }                                       
-                                /*LA NOTE ENCHANTEE
+                                /*A LA FRANCAISE
                                 HEADER*/
+.blocflechedegaucheretourettitre-3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+}
+#flechedegaucheretour-3 {
+    color: black;
+}
+.titreohmyfoodheader-3 {
+    display: flex;
+}
+.imagealafrancaise-3 {
+    width: 100%;
+    height: 275px;
+}
+                                /*RESTAURANTS*/
+.sectiontoutleblocrestaurants-3 {
+    background: #F7F7F7;
+    border-radius: 30px 30px 0 0;
+    display: block;
+}
+.bloctoutleblocrestaurants-3 {
+    width: 90%;
+    margin: auto;
+}
+.divalafrancaise-3 {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+#coeuralafrancaise-3:active {
+    color: var(--colorviolet-color);
+}
+.blocles3entrees-3, .blocles3plats-3, .blocles3desserts-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 230px;
+    width: 95%;
+    margin: auto;
+}
+.entrees-3, .PLATS-3, .DESSERTS-3 {
+    border-bottom: 3px solid var(--colorvertclair-color);
+    width: 10%;
+    padding-bottom: 5px;
+}
+.diventrees-3, .divplats-3, .divdesserts-3 {
+    background: #FFFFFF;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15.0431px;
+}
+.divCommander-3 {
+   display: flex;
+   justify-content: center;
+   background: #F7F7F7;
+}
+.Commander-3 {
+    background: var(--colorviolet-color);
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 50%;
+    margin: 20px 0 30px 0;
+    cursor: pointer;
+    background: var(--colorbouttoncommander-background);
+    border: var(--colorbouttoncommander-background)
+}
 
+                      /*FOOTER*/
+.blocfooter-3 {
+    background: #353535;
+    padding-top: 1px;
+    width: 100%;
+    height: 170px;
+}
+.divfooter-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+}
+.texteProposerunrestaurant-3 {
+    margin-left: 18px;
+}
+.texteDevenirpartenaire-3 {
+    margin-left: 10px;
+}
+.iconeetProposerunrestaurant-3 {
+  display: flex;
+}
+.iconeDevinirpartenaire-3 {
+ display: flex;   
+}
+.imagedufooter-3 {
+    color: white;
+    font-family: var(--fontfamillyohmyfood-font-family);
+}   
+                            /*LE DELICE DES SENS
+                                HEADER*/
+.blocflechedegaucheretourettitre-4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+}
+#flechedegaucheretour-4 {
+    color: black;
+}
+.titreohmyfoodheader-4 {
+    display: flex;
+}
+.imageledelicedessens-4 {
+    width: 100%;
+    height: 275px;
+}
+                                /*RESTAURANTS*/
+.sectiontoutleblocledelicedessens-4 {
+    background: #F7F7F7;
+    border-radius: 30px 30px 0 0;
+    display: block;
+}
+.bloctoutleblocrestaurants-4 {
+    width: 90%;
+    margin: auto;
+}
+.divledelicedessens-4 {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+#coeuralafrancaise-4:active {
+    color: var(--colorviolet-color);
+}
+.blocles3entrees-4, .blocles3plats-4, .blocles3desserts-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 230px;
+}
+.entrees-4, .PLATS-4, .DESSERTS-4 {
+    border-bottom: 3px solid var(--colorvertclair-color);
+    width: 10%;
+    padding-bottom: 5px;
+}
+.diventrees-4, .divplats-4, .divdesserts-4 {
+    background: #FFFFFF;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15.0431px;
+}
+.divCommander-4 {
+    display: flex;
+    justify-content: center;
+    background: #F7F7F7;
+}
+.Commander-4 {
+    background: var(--colorviolet-color);
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 50%;
+    margin: 20px 0 30px 0;
+    cursor: pointer;
+    background: var(--colorbouttoncommander-background);
+    border: var(--colorbouttoncommander-background)
+}
+
+                        /*FOOTER*/
+.blocfooter-4 {
+    background: #353535;
+    padding-top: 1px;
+    width: 100%;
+    height: 170px;
+}
+.divfooter-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+}
+.texteProposerunrestaurant-4 {
+    margin-left: 18px;
+}
+.texteDevenirpartenaire-4 {
+    margin-left: 12px;
+}
+.iconeetProposerunrestaurant-4 {
+    display: flex;
+}
+.iconeDevinirpartenaire-4 {
+    display: flex;   
+}
+.titredufooter-4 {
+    color: white;
+    font-family: var(--fontfamillyohmyfood-font-family);
+}
+    
+}
+
+                        /*VERSION DESKTOP
+                            HEADER*/
+@media screen and (min-width: 992px) {
+.h1titreohmyfood {
+    display: flex;
+    justify-content: center;
+}
+.diviconeparisbelleville {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EAEAEA;
+}
+.parisbelleville {
+    margin-left: 20px;
+}
+                    /*Réservez le menu qui vous convient*/
+.blocbackgroundh2 {
+    display: flex;
+    justify-content: center;
+}
+.Explorernosrestaurants {
+    background: var(--colorbouttoncommander-background);
+    padding: 15px;
+    border-radius: 25px;
+    border: var(--colorviolet-color);
+}
+.bloctoutleblocfonctionnement {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.blocles3choixmenus {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+.divChoississezunrestaurant, .divComposezvotremenu, .divDegustezaurestaurant {
+    display: flex;
+}
+.detailfonctionement {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
 }
