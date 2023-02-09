@@ -21,10 +21,6 @@ body {
 p {
     margin: var(--margin0-margin);
 }
-h1, h2, h3, h4, h5, h6 {
-    margin: var(--margin0-margin);
-}
-
 .h1titreohmyfood {
     display: flex;
     justify-content: center;
@@ -64,14 +60,13 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 /*FONCTIONNEMENT*/
-
 .sectiontoutleblocfonctionnement {
     display: flex;
     justify-content: space-around;
     height: 300px;
 }    
 .bloctoutleblocfonctionnement {
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 .blocles3choixmenus {
@@ -111,25 +106,33 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--colorviolet-color);
 }
 /*RESTAURANTS*/
+.nouveau {
+    background: var(--colorvertclair-color);
+    color: var(--colorvertfoncé-color);
+    width: 20%;
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
 .sectiontitrerestaurants {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background: #D2D2D2;
-    height: 1380px;
+    height: 1500px;
 }
 .blocrestaurantsentreeplatsdesserts {
     width: 80%;
     margin: auto;
 }                            
+.divtitreRestaurants {
+    height: 50px;
+}
 .blocles4images {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-}
-.divtitreRestaurants {
-    height: 50px;
 }
 .divlapalettedugout, .divlanoteenchantee, .divalafrançaise, .divLedelicedessens {
     background: white;
@@ -153,7 +156,6 @@ h1, h2, h3, h4, h5, h6 {
    width: 95%;
    margin: auto;
    margin: var(--margintextecarte-margin);
-
 }
 #iconecoeur, #iconecoeur, #iconecoeur, #iconecoeur {
     display: flex;
@@ -175,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 90%;
+    width: 80%;
     height: 150px;
     margin: auto;
 }
@@ -205,15 +207,13 @@ footer i, .titredufooter {
 .blocflechedegaucheretourettitre1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 50px;
-    border: var(--bordertest-border);
+    width: 75%;
 }
 
 #flechedegaucheretour1 {
     color: black;
-    border: var(--bordertest-border);
-    text-align: left;
 }
 #flechedegaucheretour1:hover {
     color: var(--colorviolet-color);
@@ -238,19 +238,21 @@ footer i, .titredufooter {
     background: #F7F7F7;
     border-radius: 30px 30px 0 0;
     width: 100%;
-}
-.blockcolorsection1 {
-    position: absolut;
+    position: relative;
+    bottom: 60px;
 }
 .bloctoutleblocrestaurants1 {
     width: 90%;
     margin: auto;
 }
-.divlapalettedugout1 {
+.divtitrerestaurants1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
+    width: 90%;
+}
+.titrerestaurant1 {
+   
     font-family: var(--fontfamillyohmyfood-font-family);
 }
 #coeurlapalettedugout1:active {
@@ -282,6 +284,10 @@ footer i, .titredufooter {
     border-radius: 15.0431px;
     height: 50px;
 }
+.diventrees1:hover, .divplats1:hover, .divdesserts1:hover {
+   
+
+}
 .detailentrees1 {
     display: flex;
     align-items: center;
@@ -290,10 +296,10 @@ footer i, .titredufooter {
     margin: auto;
 }
 .detailentrees1:hover {
-    color: #008766;
-    background: salmon;
+    transform-origin: right;
+    transform: scaleX(1.2);
+    background: #008766;
 }
-
 .divCommander1 {
    display: flex;
    justify-content: center;
@@ -326,6 +332,10 @@ footer i, .titredufooter {
     height: 150px;
     margin: auto;
 }
+.titredufooter1 {
+    color: white;
+    font-family: var(--fontfamillyohmyfood-font-family);
+}   
 .texteProposerunrestaurant1 {
     margin-left: 18px;
 }
@@ -338,10 +348,7 @@ footer i, .titredufooter {
 .iconeDevinirpartenaire1 {
  display: flex;   
 }
-.imagedufooter1 {
-    color: white;
-    font-family: var(--fontfamillyohmyfood-font-family);
-}   
+
  
 
                                 /*VERSION DESKTOP
@@ -493,6 +500,9 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     width: 90%;
     margin: auto;
+}
+.nouveau {
+    display: none;
 }
 /*FOOTER*/
 .blocfooter {
