@@ -16,6 +16,8 @@
 body {
     margin: var(--margin0-margin);
     font-family: 'Roboto', sans-serif;
+    max-width: 1300px;
+    min-width: 375px;
 }
                                     /*HEADER*/
 p {
@@ -106,28 +108,18 @@ p {
     color: var(--colorviolet-color);
 }
 /*RESTAURANTS*/
-.nouveau {
-    background: var(--colorvertclair-color);
-    color: var(--colorvertfoncé-color);
-    width: 20%;
-    text-align: center;
-    position: relative;
-    top: 50px;
-}
+
 .sectiontitrerestaurants {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background: #D2D2D2;
-    height: 1500px;
+    height: 1530px;
 }
 .blocrestaurantsentreeplatsdesserts {
     width: 80%;
     margin: auto;
 }                            
-.divtitreRestaurants {
-    height: 50px;
-}
 .blocles4images {
     display: flex;
     flex-direction: column;
@@ -141,30 +133,48 @@ p {
     margin-bottom: 20px;
     background: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-.divLedelicedessens {
-    margin-bottom: 30px;
+    position: relative;
 }
 .imagelapalettedugout, .imagelanoteenchantee, .imagealafrançaise, .imageLedelicedessens {
     width: 100%;
     height: 231px;
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
 }
 .detailiconecoeur {
-   display: flex;
-   justify-content: space-between;
-   width: 95%;
-   margin: auto;
-   margin: var(--margintextecarte-margin);
-}
-#iconecoeur, #iconecoeur, #iconecoeur, #iconecoeur {
     display: flex;
     align-items: center;
-    width: 10%;
+    justify-content: space-between;
+    width: 90%;
+    margin: var(--margintextecarte-margin);
+}
+#iconecoeur {
     cursor: pointer;
+    color: black transparent;
+    transition: all 100ms;
 }
 #iconecoeur:active {
-   color: var(--colorviolet-color);
+    background: linear-gradient(to bottom left, #9356dc, #ff79da);
+    transform: scale(2);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.divnouveau {
+    position: relative;
+}
+.nouveau {
+    background: var(--colorvertclair-color);
+    color: var(--colorvertfoncé-color);
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--colorvertclair-color);
+    color: var(--colorvertfoncé-color);
+    display: block;
+    text-align: center;
+    right: 20px;
+    top: 20px;
+    position: absolute;
+    height: 25px;
 }
 /*FOOTER*/
 .blocfooter {
@@ -290,11 +300,15 @@ footer i, .titredufooter {
     justify-content: space-between;
     width: 95%;
     margin: auto;
-}
-.detailentrees1:hover {
     transform-origin: right;
-    transform: scaleX(1.2);
-    background: #008766;
+}
+.prixentrees1 {
+    transform-origin: right 50%;
+}
+.prixentrees1:hover {
+    transform: translateX(-40px);
+    background-color: var(--colorvertclair-color);
+    color: var(--colorvertclair-color);
 }
 .divCommander1 {
    display: flex;
@@ -353,6 +367,7 @@ footer i, .titredufooter {
 body {
     margin: var(--margin0-margin);
     font-family: 'Roboto', sans-serif;
+    max-width: 1300px;
 }
 
 div p {
