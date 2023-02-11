@@ -6,7 +6,8 @@
     --colorvertclair-color: #99E2D0;
     --colorgrey2-color: #EAEAEA;
     --colorbouttoncommander-background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-    --colorbouttoncommander-background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    --colorhovercommander-background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    --boxshadowboutton-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     --margin0-margin: 0;
     --margintextecarte-margin: 10px 0 10px 10px;
     --marginh1titreohmyfood-margin: 10px 0 10px 0;
@@ -16,8 +17,9 @@
 body {
     margin: var(--margin0-margin);
     font-family: 'Roboto', sans-serif;
-    max-width: 1300px;
-    min-width: 375px;
+}
+a {
+    text-decoration: none;
 }
                                     /*HEADER*/
 p {
@@ -55,11 +57,15 @@ p {
 .Explorernosrestaurants {
     color: white;
     text-align: center;
-    background: var(--colorbouttoncommander-background);
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     border: var(--colorviolet-color);
     border-radius: 25px;
     padding: 10px;
     cursor: pointer;
+}
+.Explorernosrestaurants:hover {
+    background: var(--colorhovercommander-background);
+    box-shadow: var(--boxshadowboutton-box-shadow)
 }
 /*FONCTIONNEMENT*/
 .sectiontoutleblocfonctionnement {
@@ -76,30 +82,30 @@ p {
     flex-direction: column;
     justify-content: space-around;
     margin: auto;
+    width: 100%;
     height: 200px;
 }
-.Choississezunrestaurant, .Composezvotremenu, .Degustezaurestaurant {
+.divChoississez, .divComposez, .divDegustez {
     display: flex;
     align-items: center;
-    background: #F7F7F7;
-    width: 90%;
-    margin: auto;
-    height: 40px;
+    width: 100%;
+    height: 50px;
     border-radius: 20px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background: #F7F7F7;
 }
-.Choississezunrestaurant:hover, .Composezvotremenu:hover, .Degustezaurestaurant:hover {
+.divChoississez:hover, .divComposez:hover, .divDegustez:hover {
     background: #F5EDFF;
     cursor: pointer;
 }
-.numero1, .numero2, .numero3 {
+.divnumero {
     background: var(--colorviolet-color);
     border-radius: 50px;
-    width: 6%;
     text-align: center;
     color: white;
     position: relative;
-    right: 5px;
+    right: 10px;
+    width: 6%;
+    background: var(--colorviolet-color);
 }
 #iconefonctionnement {
     margin: 0 10px 0 5px;
@@ -133,7 +139,6 @@ p {
     margin-bottom: 20px;
     background: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 .imagelapalettedugout, .imagelanoteenchantee, .imagealafrançaise, .imageLedelicedessens {
     width: 100%;
@@ -175,8 +180,12 @@ p {
     top: 20px;
     position: absolute;
     height: 25px;
+    width: 90px;
 }
 /*FOOTER*/
+.blocfooter0 {
+    display: none;
+}
 .blocfooter {
     background: #353535;
     padding-top: 1px;
@@ -217,11 +226,13 @@ footer i, .titredufooter {
 .blocflechedegaucheretourettitre1 {
     display: flex;
     align-items: center;
-    justify-content: space-around;
     height: 50px;
-    width: 75%;
 }
-
+.divflechedegauche {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
 #flechedegaucheretour1 {
     color: black;
 }
@@ -231,12 +242,12 @@ footer i, .titredufooter {
 .divtitreohmyfood {
     display: flex;
     justify-content: center;
-    border: var(--bordertest-border);
-}                        
+    width: 60%;
+}
 .titreohmyfoodheader1 {
     display: flex;
-    justify-content: center;
-}
+    margin: 0;
+}                        
 .imageprincipale1 {
     width: 100%;
     height: 275px;
@@ -259,11 +270,14 @@ footer i, .titredufooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
+    width: 97%;
 }
 .titrerestaurant1 {
-   
+    font-size: 19px;
     font-family: var(--fontfamillyohmyfood-font-family);
+}
+#coeurlapalettedugout1 {
+    font-size: 19px;
 }
 #coeurlapalettedugout1:active {
     color: var(--colorviolet-color);
@@ -302,31 +316,25 @@ footer i, .titredufooter {
     margin: auto;
     transform-origin: right;
 }
-.prixentrees1 {
-    transform-origin: right 50%;
-}
-.prixentrees1:hover {
-    transform: translateX(-40px);
-    background-color: var(--colorvertclair-color);
-    color: var(--colorvertclair-color);
-}
 .divCommander1 {
    display: flex;
    justify-content: center;
    background: #F7F7F7;
 }
 .Commander1 {
-    background: var(--colorviolet-color);
+    background: var(--colorbouttoncommander-background);
     color: white;
     border-radius: 20px;
     height: 40px;
     width: 35%;
     margin: 20px 0 30px 0;
     cursor: pointer;
-    background: var(--colorbouttoncommander-background);
-    border: var(--colorbouttoncommander-background)
+    border: var(--colorbouttoncommander-background);
 }
-
+.Commander1:hover {
+    background: var(--colorhovercommander-background);
+    box-shadow: var(--boxshadowboutton-box-shadow);
+}
 /*FOOTER*/
 .blocfooter1 {
     background: #353535;
@@ -353,23 +361,43 @@ footer i, .titredufooter {
     margin-left: 10px;
 }
 .iconeetProposerunrestaurant1 {
-  display: flex;
+    display: flex;
 }
 .iconeDevinirpartenaire1 {
- display: flex;   
+    display: flex;   
 }
-
- 
-
+                                        /*TABLETTE*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+/*FONCTIONNEMENT*/
+.bloctoutleblocfonctionnement {
+    width: 40%;
+    margin-left: 40%;
+}
+/*RESTAURANTS*/
+.sectiontitrerestaurants {
+    height: 900px;
+}
+.blocrestaurantsentreeplatsdesserts {
+    width: 100%;
+}
+.divtitreRestaurants {
+    display: flex;
+    justify-content: center;
+}
+.blocpalettenote, .blocfrancaisedelice {
+    display: flex;
+    justify-content: space-around;
+}
+.imagerestaurant {
+    width: 40%;
+}
+}                         
                                 /*VERSION DESKTOP
                                     HEADER*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
 body {
     margin: var(--margin0-margin);
-    font-family: 'Roboto', sans-serif;
-    max-width: 1300px;
 }
-
 div p {
     margin: var(--margin0-margin);
 }
@@ -379,7 +407,6 @@ h1, h2, h3, h4, h5, h6 {
 /*HEADER*/
 .blocflechedegaucheretourettitre1 {
     display: flex;
-
 }
 .diviconeparisbelleville {
     display: flex;
@@ -431,6 +458,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-around;
     align-items: center;
     height: 200px;
+    background: white;
 }
 .bloctoutleblocfonctionnement {
     display: flex;
@@ -442,39 +470,25 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     height: 100px;
 }
-.divChoississezunrestaurant, .divComposezvotremenu, .divDegustezaurestaurant {
+.divChoississez, .divComposez, .divDegustez {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 25%;
+    width: 30%;
+    height: 50px;
     background: #F7F7F7;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     cursor: pointer;
-    height: 50px;
 }
-
-.divChoississezunrestaurant:hover, .divComposezvotremenu:hover, .divDegustezaurestaurant:hover {
+.divChoississez:hover, .divComposez:hover, .divDegustez:hover {
     background: #F5EDFF;
 }
-.Choississezunrestaurant, .Composezvotremenu, .Degustezaurestaurant {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 50px;
-    margin-right: auto;
-}
-.numero1, .numero2, .numero3 {
-    color: white;
+.divnumero {
+    width: 8%;
     background: var(--colorviolet-color);
-    border-radius: 10px;
-    width: 5%;
-    text-align: center;
 }
 /*RESTAURANTS*/
 .sectiontitrerestaurants {
@@ -487,23 +501,31 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-around;
     width: 80%;
 }
+.divtitreRestaurants {
+    height: 50px;
+}
 .blocles4images {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 120%;
+    width: 100%;
 }
-.divlapalettedugout, .divlanoteenchantee, .divalafrançaise, .divLedelicedessens {
+.blocpalettenote, .blocfrancaisedelice {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+.imagerestaurant {
     background: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    width: 20%;
-    height: 280px;
+    border-radius: 20px;
+    width: 45%;
+    height: 300px;
 }
-
 .imagelapalettedugout, .imagelanoteenchantee, .imagealafrançaise, .imageLedelicedessens {
     width: 100%;
     height: 231px;
+    object-fit: cover;
 }
 .detailiconecoeur {
     display: flex;
@@ -512,39 +534,45 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
     margin: auto;
 }
-.nouveau {
-    display: none;
-}
 /*FOOTER*/
 .blocfooter {
-    display: flex;
-    width: 100%;
-    background: #353535;
-    height: 100px;
+    display: none;
 }
-.divfooter {
+.blocfooter0 {
     display: flex;
+    background: #353535;
+    padding-top: 1px;
+    width: 100%;
+    height: 80px;
+}
+.divfooter0 {
+    display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    width: 70%;
-    margin-left: 25%;
-    height: 50px;
+    width: 80%;
+    margin: auto;
 }
-.titredufooter {
-    color: white;
-}
-.texteProposerunrestaurant {
+.texteProposerunrestaurant0 {
     margin-left: 18px;
 }
-.texteDevenirpartenaire {
+.texteDevenirpartenaire0 {
     margin-left: 12px;
 }
-.iconeetProposerunrestaurant, .iconeetDevinirpartenaire, .mentionlegale, .Contact {
-    display: flex;
-    align-items: center;
-    color: white;
+.iconeetProposerunrestaurant0 {
+  display: flex;
 }
+.iconeetDevinirpartenaire0 {
+ display: flex;
+}
+footer p  {
+    color: white;
+    margin: var(--margin0-margin);
+}
+footer i, .titredufooter0 {
+    color: white;
+    font-family: var(--fontfamillyohmyfood-font-family);
+}   
                                     /*VERSION DESKTOP-2 LA PALETTE DU GOUT*/
 /*HEADER*/
 a {
@@ -553,31 +581,43 @@ a {
 .blocflechedegaucheretourettitre1 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 55%;
-    height: 100px;
-    border: var(--bordertest-border);
+    height: 50px;
+}
+.divflechedegauche {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+#flechedegaucheretour1 {
+    color: black;
 }
 #flechedegaucheretour1:hover {
     color: var(--colorviolet-color);
 }
-.imageLapalettedugout1 {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-/*RESTAURANTS*/
-.sectiontoutleblocrestaurants1 {
+.divtitreohmyfood {
     display: flex;
     justify-content: center;
+    width: 60%;
+}
+.titreohmyfoodheader1 {
+    display: flex;
+    margin: 0;
+}
+.imageprincipale1 {
+    height: 470px;
+}
+/*RESTAURANTS*/
+.sectiontoutleblocrestaurants1 {
+    background: #D2D2D2;
+    border-radius: 0;
 }
 .blockcolorsection1 {
     background: #F7F7F7;
+    position: relative;
+    bottom: 60px;
     width: 70%;
     margin: auto;
     border-radius: 30px 30px 0 0;
-    position: relative;
 }
 .bloctoutleblocrestaurants1 {
     display: flex;
@@ -588,19 +628,12 @@ a {
     height: 800px;
     margin: auto;
 }
-.divlapalettedugout1 {
+.divtitrerestaurants1 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-family: var(--fontfamillyohmyfood-font-family);
-    margin-top: 20px;
+    height: 80px;
 }
-.lapalettedugout1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 70%;
-}
+
 .blocles3entrees1, .blocles3plats1, .blocles3desserts1 {
     display: flex;
     flex-direction: column;
@@ -608,8 +641,8 @@ a {
     height: 220px;
 }
 .entrees1, .PLATS1, .DESSERTS1 {
-border-bottom: 3px solid #99E2D0;
-width: 8%;
+    border-bottom: 3px solid #99E2D0;
+    width: 8%;
 }
 .diventrees1, .divplats1, .divdesserts1 {
     display: flex;
@@ -624,9 +657,6 @@ width: 8%;
     width: 95%;
     height: 60px;
     margin: auto;
-}
-.bloccommander {
-    height: 100px;
 }
 .divCommander1 {
     display: flex;
@@ -645,9 +675,7 @@ width: 8%;
 }
 /*FOOTER*/
 .blocfooter1 {
-    background: #353535;
-    display: flex;
-    justify-content: center;
+    display: none;
 }
 .divfooter1 {
     display: flex;
@@ -660,3 +688,4 @@ width: 8%;
     align-items: center;
 }
 }
+ 
