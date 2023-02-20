@@ -15,25 +15,59 @@
     --fontfamillyohmyfood-font-family: 'Shrikhand', cursive;
     --bordertest-border: 2px solid black;
 }
-.bloccoeur {
+.divloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 10px;
+    background: black;
+    color: white;
+    letter-spacing: 30px;
+    animation: disparition 3s forwards;
+}
+@keyframes disparition {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/*animation coeur*/
+.divcoeur1 {
     display: flex;
 }
-.coeurblanc {
+.coeurwhite {
     position: absolute;
+    z-index: 1;
 }
-.coeurblanc :hover {
+.coeurblack {
+    position: absolute;
     opacity: 0;
 }
-.coeurnoir {
-    opacity: 0;
-}
-.coeurnoir:hover {
+.coeurblack:hover {
     opacity: 1;
-    color: transparent;
+    background-image: linear-gradient(176deg, #9356dc 0%, #ff79dc 0%, #ff79da);
     background-clip: text;
-    background-image: linear-gradient(red, yellow);
+    color: transparent;
+    transition: transform 1s cubic-bezier(0.55, 1.2, 0.9, 3, 1);
+    transform-origin: top;
 }
-/*  Animations choix menu*/
+.coeurlapalettedugout1 {
+    font-size: 19px;
+}
+#coeurlapalettedugout1:active {
+    color: var(--colorviolet-color);
+}
+/*Animations choix menu*/
 .menu-plat:hover .menu-plat__titre {
     width: calc(100% - 60px);
 }
@@ -60,48 +94,19 @@
 body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
+    padding: 0;
     margin: var(--margin0-margin);
     min-width: 375px;
+    
 }
 a {
     text-decoration: none;
 }
-/*
-.divloader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    letter-spacing: 10px;
-    background: black;
-    color: white;
-    animation-fill-mode: both;
-    letter-spacing: 30px;
-    animation: disparition 3s;
-}
-@keyframes disparition {
-    0% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
 
-    }
-}
 
                                     /*HEADER*/
 p {
     margin: var(--margin0-margin);
-}
-.divh1titreohmyfood {
-    display: none;
 }
 .h1titreohmyfood {
     display: flex;
@@ -149,7 +154,6 @@ p {
 .sectiontoutleblocfonctionnement {
     display: flex;
     justify-content: space-around;
-    height: 300px;
 }    
 .bloctoutleblocfonctionnement {
     width: 80%;
@@ -161,7 +165,7 @@ p {
     justify-content: space-around;
     margin: auto;
     width: 100%;
-    height: 200px;
+    height: 250px;
 }
 .divChoississez, .divComposez, .divDegustez {
     display: flex;
@@ -182,7 +186,7 @@ p {
     color: white;
     position: relative;
     right: 10px;
-    width: 6%;
+    width: 20px;
     background: var(--colorviolet-color);
 }
 .diviconefonctionnement {
@@ -201,7 +205,6 @@ p {
 }
 .blocrestaurantsentreeplatsdesserts {
     width: 80%;
-    height: 1300px;
     margin: auto;
 }
 .bloc2image {
@@ -212,7 +215,6 @@ p {
 }
 .divlapalettedugout, .divlanoteenchantee, .divalafrançaise, .divLedelicedessens {
     background: white;
-    width: 100%;
     height: 285px;
     border-radius: 20px;
     background: white;
@@ -230,40 +232,22 @@ p {
     justify-content: space-between;
     width: 90%;
     margin: auto;
-}/*
-.coeurblanc {
-    transform: translateX(px);
 }
-.coeurblanc:active {
-    color: transparen;
-}
-.divcoeur {
-    position: relative;
-}
-.coeurnoir {
-    cursor: pointer;
-    color: transparent;
-    transform: translateY();
-}
-.coeurnoir:active {
-    background-color: red;
-    background-clip: text;
-}*/
 .divnouveau {
     position: relative;
 }
 .nouveau {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
     background: var(--colorvertclair-color);
     color: var(--colorvertfoncé-color);
-    text-align: center;
     font-weight: bold;
     background-color: var(--colorvertclair-color);
     color: var(--colorvertfoncé-color);
-    display: block;
-    text-align: center;
     right: 20px;
     top: 20px;
-    position: absolute;
     height: 25px;
     width: 90px;
 }
@@ -272,6 +256,9 @@ p {
     display: none;
 }
 .blocfooter {
+     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     background: #353535;
     padding-top: 1px;
     width: 100%;
@@ -351,6 +338,18 @@ footer i, .titredufooter {
     width: 90%;
     margin: auto;
 }
+.blocles4entrees1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+}
+.blocles3entrees1, .blocles3plats1, .blocles3desserts1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 230px;
+}
 .divtitrerestaurants1 {
     display: flex;
     align-items: center;
@@ -360,24 +359,6 @@ footer i, .titredufooter {
 .titrerestaurant1 {
     font-size: 19px;
     font-family: var(--fontfamillyohmyfood-font-family);
-}
-#coeurlapalettedugout1 {
-    font-size: 19px;
-}
-#coeurlapalettedugout1:active {
-    color: var(--colorviolet-color);
-}
-.blocles3entrees1, .blocles3plats1, .blocles3desserts1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 230px;
-}
-.blocles4entrees1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 300px;
 }
 .entrees1, .PLATS1, .DESSERTS1 {
     border-bottom: 3px solid var(--colorvertclair-color);
@@ -436,18 +417,38 @@ footer i, .titredufooter {
         opacity: 1;
     }
 }
+/*animation menu au survol*/
+.divanimate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 50px;
+    background: green;
+    color: white;
+    border: var(--bordertest-borderh);
+}
+.divanimate:hover {
+    transform: translateX(-30px);
+}
+.animate {
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 4px;
+}
+
 .detailentrees1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 95%;
     margin: auto;
-    transform-origin: right;
 }
 .divCommander1 {
    display: flex;
    justify-content: center;
-   background: #F7F7F7;
+   align-items: center;
+   height: 80px;
 }
 .Commander1 {
     background: var(--colorbouttoncommander-background);
@@ -455,9 +456,8 @@ footer i, .titredufooter {
     border-radius: 20px;
     height: 40px;
     width: 35%;
-    margin: 20px 0 30px 0;
     cursor: pointer;
-    background: var(--colorbouttoncommander-background);
+    border: violet;
 }
 .Commander1:hover {
     background: var(--colorhovercommander-background);
@@ -500,10 +500,6 @@ footer i, .titredufooter {
         width: 100%;
     }
 /*RESTAURANTS*/
-.sectiontitrerestaurants {
-    height: 900px;
-}
-
 .divtitreRestaurants {
     display: flex;
     align-items: center;
@@ -619,10 +615,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .divChoississez:hover, .divComposez:hover, .divDegustez:hover {
     background: #F5EDFF;
-}
-.divnumero {
-    width: 8%;
-    background: var(--colorviolet-color);
 }
 /*RESTAURANTS*/
 .sectiontitrerestaurants {
