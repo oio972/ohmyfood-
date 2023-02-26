@@ -14,16 +14,14 @@
     --marginh1titreohmyfood-margin: 10px 0 10px 0;
     --fontfamillyohmyfood-font-family: 'Shrikhand', cursive;
     --bordertest-border: 2px solid black;
-<<<<<<< HEAD
 }
-.bloccoeur {
-=======
-}/*
+/*loader*/
+/*
 .divloader {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -47,54 +45,104 @@
 }*/
 /*animation coeur*/
 .divcoeur1 {
->>>>>>> 0a39021 (correction div coeur)
     display: flex;
 }
-.coeurblanc {
+.coeurwhite {
     position: absolute;
 }
-.coeurblanc :hover {
+.coeurwhite:hover {
     opacity: 0;
 }
-.coeurnoir {
+.coeurblack {
     opacity: 0;
 }
-.coeurnoir:hover {
+.coeurblack:hover {
     opacity: 1;
     color: transparent;
-<<<<<<< HEAD
     background-clip: text;
-    background-image: linear-gradient(red, yellow);
+    background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    transition: all 500ms;
+    transform: scale(1.1);
 }
 /*  Animations choix menu*/
-=======
-    transition: transform 1s cubic-bezier(0.55, 1.2, 0.9, 3, 1);
-    
+.courses {
+    animation: bars 500ms ease-in-out backwards;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px -5px #353535;
+  }
+.courses__content {
+    padding: 15px 0 15px 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: transform 350ms ease-out 50ms;
+    width: 80%;
 }
-/*Animations choix menu*/
->>>>>>> 0a39021 (correction div coeur)
-.menu-plat:hover .menu-plat__titre {
-    width: calc(100% - 60px);
+.courses__price-check {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    transform: translateX(50%);
+    transition: transform 350ms ease-out 50ms;
 }
-.menu-plat:hover .compo {
-    width: calc(100% - 110px);
+.courses__price-check span {
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out;
+    color: white;
+    font-size: 20px;
 }
-.menu-plat:hover .prix {
-    transform: translateX(-60px);
+.courses .price {
+    align-self: flex-end;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
 }
-.menu-plat:hover .menu-plat__anim {
-    transform: translateX(-60px);
+.courses h3 {
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-.menu-plat:hover .verif {
-    animation: valid 0.5s;
+.courses p {
+    color: #353535;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 15px;
 }
-@keyframes valid {
-    from {
-        transform: rotate(-360deg);
-    }
-    to {
-        transform: rotate(0);
-    }
+.courses:hover > .courses__price-check {
+    transform: translateX(0px);
+}
+.courses:hover > .courses__price-check span {
+    transform: rotate(0deg);
+}
+.courses:hover > .courses__content {
+    width: 70%;
+    transition: width 350ms ease-out 50ms;
+}
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 50%;
+    background-color: #99E2D0;
+}
+@keyframes bars {
+    0% {
+    transform: translateY(20px);
+    opacity: 0;
+}
+    100% {
+    transform: translateY(0px);
+    opacity: 1;
+}
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -102,38 +150,13 @@ body {
     margin: var(--margin0-margin);
     min-width: 375px;
 }
+h3 {
+    margin: 0;
+}
 a {
     text-decoration: none;
 }
-/*
-.divloader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    letter-spacing: 10px;
-    background: black;
-    color: white;
-    animation-fill-mode: both;
-    letter-spacing: 30px;
-    animation: disparition 3s;
-}
-@keyframes disparition {
-    0% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
 
-    }
-}
 
                                     /*HEADER*/
 p {
@@ -281,7 +304,7 @@ p {
     text-align: center;
     right: 20px;
     top: 20px;
-    height: 25px;
+    height: 20px;
     width: 90px;
 }
 /*FOOTER*/
@@ -380,12 +403,6 @@ footer i, .titredufooter {
 .titrerestaurant1 {
     font-size: 19px;
     font-family: var(--fontfamillyohmyfood-font-family);
-}
-#coeurlapalettedugout1 {
-    font-size: 19px;
-}
-#coeurlapalettedugout1:active {
-    color: var(--colorviolet-color);
 }
 .blocles3entrees1, .blocles3plats1, .blocles3desserts1 {
     display: flex;
@@ -571,9 +588,6 @@ body {
     margin: var(--margin0-margin);
 }
 div p {
-    margin: var(--margin0-margin);
-}
-h1, h2, h3, h4, h5, h6 {
     margin: var(--margin0-margin);
 }
 /*HEADER*/
