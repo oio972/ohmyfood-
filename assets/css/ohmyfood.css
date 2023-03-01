@@ -15,72 +15,20 @@
     --fontfamillyohmyfood-font-family: 'Shrikhand', cursive;
     --bordertest-border: 2px solid black;
 }
-.bloccoeur {
-    display: flex;
-}
-.coeurblanc {
-    position: absolute;
-}
-.coeurblanc :hover {
-    opacity: 0;
-}
-.coeurnoir {
-    opacity: 0;
-}
-.coeurnoir:hover {
-    opacity: 1;
-    color: transparent;
-    background-clip: text;
-    background-image: linear-gradient(red, yellow);
-}
-/*  Animations choix menu*/
-.menu-plat:hover .menu-plat__titre {
-    width: calc(100% - 60px);
-}
-.menu-plat:hover .compo {
-    width: calc(100% - 110px);
-}
-.menu-plat:hover .prix {
-    transform: translateX(-60px);
-}
-.menu-plat:hover .menu-plat__anim {
-    transform: translateX(-60px);
-}
-.menu-plat:hover .verif {
-    animation: valid 0.5s;
-}
-@keyframes valid {
-    from {
-        transform: rotate(-360deg);
-    }
-    to {
-        transform: rotate(0);
-    }
-}
-body {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    margin: var(--margin0-margin);
-    min-width: 375px;
-}
-a {
-    text-decoration: none;
-}
-/*
+/*loader*//*
 .divloader {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 100%;
     height: 100%;
     letter-spacing: 10px;
     background: black;
     color: white;
-    animation-fill-mode: both;
     letter-spacing: 30px;
-    animation: disparition 3s;
+    animation: disparition 2s forwards;
 }
 @keyframes disparition {
     0% {
@@ -92,9 +40,122 @@ a {
     100% {
         opacity: 0;
         visibility: hidden;
-
     }
 }
+/*animation coeur*/
+.divcoeur1 {
+    display: flex;
+}
+.coeurwhite {
+    position: absolute;
+}
+.coeurwhite:hover {
+    opacity: 0;
+}
+.coeurblack {
+    opacity: 0;
+}
+.coeurblack:hover {
+    opacity: 1;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    transition: all 500ms;
+    transform: scale(1.1);
+}
+/*  Animations choix menu*/
+.courses {
+    animation: bars 500ms ease-in-out backwards;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px -5px #353535;
+  }
+.courses__content {
+    padding: 15px 0 15px 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: transform 350ms ease-out 50ms;
+    width: 80%;
+}
+.courses__price-check {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    transform: translateX(50%);
+    transition: transform 350ms ease-out 50ms;
+}
+.courses__price-check span {
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out;
+    color: white;
+    font-size: 20px;
+}
+.courses .price {
+    align-self: flex-end;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.courses h3 {
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.courses p {
+    color: #353535;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 15px;
+}
+.courses:hover > .courses__price-check {
+    transform: translateX(0px);
+}
+.courses:hover > .courses__price-check span {
+    transform: rotate(0deg);
+}
+.courses:hover > .courses__content {
+    width: 70%;
+    transition: width 350ms ease-out 50ms;
+}
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 50%;
+    background-color: #99E2D0;
+}
+@keyframes bars {
+    0% {
+    transform: translateY(20px);
+    opacity: 0;
+}
+    100% {
+    transform: translateY(0px);
+    opacity: 1;
+}
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin: var(--margin0-margin);
+    min-width: 375px;
+}
+h3 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
 
                                     /*HEADER*/
 p {
@@ -104,7 +165,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
 }
 .diviconeparisbelleville {
     display: flex;
@@ -188,7 +248,6 @@ p {
     color: var(--colorviolet-color);
 }
 /*RESTAURANTS*/
-
 .sectiontitrerestaurants {
     display: flex;
     flex-direction: column;
@@ -199,11 +258,13 @@ p {
     width: 80%;
     margin: auto;
 }
+.divtitreRestaurants {
+    margin: 30px 0 20px 0;
+}
 .bloc2image {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 600px;
 }
 .divlapalettedugout, .divlanoteenchantee, .divalafrançaise, .divLedelicedessens {
     background: white;
@@ -211,6 +272,7 @@ p {
     border-radius: 20px;
     background: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 .imagelapalettedugout, .imagelanoteenchantee, .imagealafrançaise, .imageLedelicedessens {
     width: 100%;
@@ -242,7 +304,7 @@ p {
     text-align: center;
     right: 20px;
     top: 20px;
-    height: 25px;
+    height: 20px;
     width: 90px;
 }
 /*FOOTER*/
@@ -320,7 +382,6 @@ footer i, .titredufooter {
     object-fit: cover;
 }
 /*RESTAURANTS*/
-
 .sectiontoutleblocrestaurants1 {
     background: #F7F7F7;
     border-radius: 30px 30px 0 0;
@@ -342,28 +403,23 @@ footer i, .titredufooter {
     font-size: 19px;
     font-family: var(--fontfamillyohmyfood-font-family);
 }
-#coeurlapalettedugout1 {
-    font-size: 19px;
-}
-#coeurlapalettedugout1:active {
-    color: var(--colorviolet-color);
-}
 .blocles3entrees1, .blocles3plats1, .blocles3desserts1 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 230px;
+    height: 250px;
 }
 .blocles4entrees1 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 300px;
+    height: 330px;
 }
 .entrees1, .PLATS1, .DESSERTS1 {
     border-bottom: 3px solid var(--colorvertclair-color);
     width: 10%;
     padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 .diventrees1, .divplats1, .divdesserts1 {
     display: flex;
@@ -432,24 +488,6 @@ footer i, .titredufooter {
     width: 10%;
     padding-bottom: 5px;
 }
-.diventrees1, .divplats1, .divdesserts1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #FFFFFF;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    border-radius: 15.0431px;
-    height: 65px;
-}
-.detailentrees1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    height: 60px;
-    margin: auto;
-    transform-origin: right;
-}
 .divCommander1 {
    display: flex;
    justify-content: center;
@@ -508,9 +546,7 @@ footer i, .titredufooter {
 /*RESTAURANTS*/
 .divtitreRestaurants {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 80px;
 }
 .divlapalettedugout, .divlanoteenchantee , .divalafrançaise , .divLedelicedessens {
     width: 40%;
@@ -532,9 +568,6 @@ body {
     margin: var(--margin0-margin);
 }
 div p {
-    margin: var(--margin0-margin);
-}
-h1, h2, h3, h4, h5, h6 {
     margin: var(--margin0-margin);
 }
 /*HEADER*/
@@ -625,9 +658,6 @@ h1, h2, h3, h4, h5, h6 {
 /*RESTAURANTS*/
 .sectiontitrerestaurants {
     background: #D2D2D2;
-}
-.blocrestaurantsentreeplatsdesserts {
-    height: 420px;
 }
 .divtitreRestaurants {
     display: flex;
@@ -820,4 +850,3 @@ a {
     align-items: center;
 }
 }
- 
