@@ -15,38 +15,10 @@
     --fontfamillyohmyfood-font-family: 'Shrikhand', cursive;
     --bordertest-border: 2px solid black;
 }
-/*loader*//*
-.divloader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    letter-spacing: 10px;
-    background: black;
-    color: white;
-    letter-spacing: 30px;
-    animation: disparition 2s forwards;
-}
-@keyframes disparition {
-    0% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-/*animation coeur*/
-.divcoeur1 {
+.bloccoeur {
     display: flex;
 }
-.coeurwhite {
+.coeurblanc {
     position: absolute;
 }
 .coeurwhite:hover {
