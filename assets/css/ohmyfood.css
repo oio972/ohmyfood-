@@ -14,11 +14,37 @@
     --marginh1titreohmyfood-margin: 10px 0 10px 0;
     --fontfamillyohmyfood-font-family: 'Shrikhand', cursive;
     --bordertest-border: 2px solid black;
+}/*
+.divloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 10px;
+    background: black;
+    color: white;
+    letter-spacing: 30px;
+    animation: disparition 2s forwards;
 }
-.bloccoeur {
+@keyframes disparition {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}*/
+.divcoeur1 {
     display: flex;
 }
-.coeurblanc {
+.coeurwhite {
     position: absolute;
 }
 .coeurwhite:hover {
@@ -445,12 +471,6 @@ footer i, .titredufooter {
         opacity: 1;
     }
 }
-.detailentrees1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 97%;
-}
 .titrerestaurant1 {
     font-size: 19px;
     font-family: var(--fontfamillyohmyfood-font-family);
@@ -471,7 +491,7 @@ footer i, .titredufooter {
     color: white;
     border-radius: 20px;
     height: 40px;
-    width: 35%;
+    width: 200px;
     cursor: pointer;
     border: violet;
 }
@@ -738,7 +758,7 @@ a {
     margin: 0;
 }
 .imageprincipale1 {
-    height: 470px;
+    height: 350px;
 }
 /*RESTAURANTS*/
 .sectiontoutleblocrestaurants1 {
@@ -759,7 +779,6 @@ a {
     justify-content: space-around;
     background: #F7F7F7;
     width: 50%;
-    height: 800px;
     margin: auto;
 }
 .divtitrerestaurants1 {
@@ -772,7 +791,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 220px;
 }
 .entrees1, .PLATS1, .DESSERTS1 {
     border-bottom: 3px solid #99E2D0;
@@ -784,14 +802,6 @@ a {
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15.0431px;
 }
-.detailentrees1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    height: 60px;
-    margin: auto;
-}
 .divCommander1 {
     display: flex;
     justify-content: center;
@@ -801,7 +811,7 @@ a {
 .Commander1 {
     background: var(--colorbouttoncommander-background);
     color: white;
-    width: 20%;
+    width: 200px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
     border-radius: 25px;
     background: var(--colorbouttoncommander-background);
