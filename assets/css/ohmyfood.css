@@ -73,6 +73,16 @@
     overflow: hidden;
     box-shadow: 0px 0px 6px -5px #353535;
   }
+@keyframes bars {
+    0% {
+    transform: translateY(20px);
+    opacity: 0;
+}
+    100% {
+    transform: translateY(0px);
+    opacity: 1;
+}
+}
 .courses__content {
     padding: 15px 0 15px 10px;
     text-overflow: ellipsis;
@@ -87,11 +97,17 @@
     transform: translateX(50%);
     transition: transform 350ms ease-out 50ms;
 }
+.courses:hover > .courses__price-check {
+    transform: translateX(0px);
+}
 .courses__price-check span {
     transform: rotate(-360deg);
     transition: transform 500ms ease-in-out;
     color: white;
     font-size: 20px;
+}
+.courses:hover > .courses__price-check span {
+    transform: rotate(0deg);
 }
 .courses .price {
     align-self: flex-end;
@@ -112,12 +128,6 @@
     overflow: hidden;
     font-size: 15px;
 }
-.courses:hover > .courses__price-check {
-    transform: translateX(0px);
-}
-.courses:hover > .courses__price-check span {
-    transform: rotate(0deg);
-}
 .courses:hover > .courses__content {
     width: 70%;
     transition: width 350ms ease-out 50ms;
@@ -130,16 +140,6 @@
     height: inherit;
     width: 50%;
     background-color: #99E2D0;
-}
-@keyframes bars {
-    0% {
-    transform: translateY(20px);
-    opacity: 0;
-}
-    100% {
-    transform: translateY(0px);
-    opacity: 1;
-}
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -237,7 +237,6 @@ p {
     position: relative;
     right: 10px;
     width: 20px;
-    background: var(--colorviolet-color);
 }
 .diviconefonctionnement {
     margin: 0 10px 0 5px;
@@ -289,16 +288,10 @@ p {
     position: relative;
 }
 .nouveau {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     background: var(--colorvertclair-color);
     color: var(--colorvertfoncé-color);
     font-weight: bold;
-    background-color: var(--colorvertclair-color);
-    color: var(--colorvertfoncé-color);
-    display: block;
     text-align: center;
     right: 20px;
     top: 20px;
@@ -310,11 +303,8 @@ p {
     display: none;
 }
 .blocfooter {
-     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
     background: #353535;
-    padding-top: 1px;
+    padding-top: 10px;
     width: 100%;
     height: 170px;
 }
@@ -332,11 +322,8 @@ p {
 .texteDevenirpartenaire {
     margin-left: 12px;
 }
-.iconeetProposerunrestaurant {
+.iconeetProposerunrestaurant, .iconeetDevinirpartenaire {
   display: flex;
-}
-.iconeetDevinirpartenaire {
- display: flex;   
 }
 footer p  {
     color: white;
@@ -385,7 +372,8 @@ footer i, .titredufooter {
     border-radius: 30px 30px 0 0;
     width: 100%;
     position: relative;
-    bottom: 60px;
+    margin-top: -43;
+    z-index: 1;
 }
 .bloctoutleblocrestaurants1 {
     width: 90%;
@@ -395,11 +383,23 @@ footer i, .titredufooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 97%;
+    width: 250px;
 }
-.titrerestaurant1 {
+.titrelapalette1 {
     font-size: 19px;
     font-family: var(--fontfamillyohmyfood-font-family);
+}
+.titrealafrancaise1 {
+    font-size: 16px;
+    font-family: var(--fontfamillyohmyfood-font-family);
+}
+.titrelanote1 {
+    font-size: 13px;
+    font-family: var(--fontfamillyohmyfood-font-family); 
+}
+.titredelisse1 {
+    font-size: 14px;
+    font-family: var(--fontfamillyohmyfood-font-family); 
 }
 .blocles3entrees1, .blocles3plats1, .blocles3desserts1 {
     display: flex;
@@ -785,6 +785,7 @@ a {
     display: flex;
     align-items: center;
     height: 80px;
+    width: 250px;
 }
 
 .blocles3entrees1, .blocles3plats1, .blocles3desserts1 {
