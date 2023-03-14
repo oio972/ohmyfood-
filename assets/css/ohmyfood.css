@@ -55,7 +55,8 @@
 .coeurblack:hover {
     opacity: 1;
     color: transparent;
-    background-clip: text;
+    background-clip: text;  
+    -webkit-background-clip: text;
     background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     transition: all 500ms;
     transform: scale(1.1);
